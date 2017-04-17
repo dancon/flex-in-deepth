@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex Box</title>
+  <style type="text/css">
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .flex-container{
+      display: flex;
+      list-style: none;
+      /*
+      flex-direction: row;
+      flex-wrap: wrap;
+      */
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: center;
+      counter-reset: number-counter;
+      background-color: aliceblue;
+      height: 300px;
+      border: 1px solid;
+    }
+
+    .flex-container > li{
+      width: 100px;
+      height: 100px;
+      background-color: aquamarine;
+      margin: 8px;
+      font-size: 32px;
+      line-height: 100px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .flex-container > li:nth-child(1){
+      order: 1;
+    }
+
+    .flex-container > li:before{
+      counter-increment: number-counter;
+      content: counter(number-counter);
+    }
+  </style>
+</head>
+<body>
+  <ul class="flex-container">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+</html>
