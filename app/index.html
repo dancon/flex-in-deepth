@@ -8,6 +8,15 @@
       padding: 0;
       margin: 0;
     }
+    ul, li{
+      list-style: none;
+    }
+    ul{
+      margin-top: 10px;
+    }
+    li{
+      margin: 0 10px;
+    }
     .flex-container{
       display: flex;
       list-style: none;
@@ -44,6 +53,58 @@
       counter-increment: number-counter;
       content: counter(number-counter);
     }
+
+    .flex-item-container{
+      display: flex;
+      padding: 15px;
+      background-color: azure;
+      border: 1px dashed;
+      list-style: none;
+      margin-top: 10px;
+      height: 100px;
+    }
+
+    .flex-item-container > li{
+      background-color: aqua;
+      flex-basis: 15px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      margin: 0 10px;
+      flex: 2;
+    }
+
+    .flex-self-container{
+      display: flex;
+      list-style: none;
+      height: 200px;
+      align-items: center;
+      background-color: bisque;
+      border: 1px dashed;
+      margin-top: 10px;
+    }
+    .flex-self-container > li{
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      margin: 0 10px;
+    }
+    .flex-self-container > li:nth-child(2){
+      align-self: flex-start;
+    }
+
+    .flex-margin-auto-container{
+      display: flex;
+      padding: 15px;
+      background-color: chocolate;
+      border: 1px solid;
+      justify-content: flex-start;
+    }
+    .flex-margin-auto-container > li{
+      background-color: darkgray;
+    }
+    .flex-margin-auto-container > li:nth-child(1){
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
@@ -59,6 +120,25 @@
     <li></li>
     <li></li>
     <li></li>
+  </ul>
+  <ul class="flex-item-container">
+    <li>this a flex item</li>
+    <li>I am a sample list with more content...more content.</li>
+  </ul>
+
+  <ul class="flex-self-container">
+    <li>this is item 1</li>
+    <li>this is item 2</li>
+    <li>this is item 3</li>
+    <li>this is item 4</li>
+  </ul>
+
+  <ul class="flex-margin-auto-container">
+    <li>Branding</li>
+    <li>Home</li>
+    <li>Service</li>
+    <li>About</li>
+    <li>Contact</li>
   </ul>
 </body>
 </html>
